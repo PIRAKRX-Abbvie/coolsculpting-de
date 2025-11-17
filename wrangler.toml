@@ -1,33 +1,4 @@
 name = "coolsculpting-de"
-compatibility_date = "2024-11-06"
+compatibility_date = "2024-11-17"
+pages_build_output_dir = "src"
 
-# Pages configuration
-pages_build_output_dir = ".vercel/output/static"
-
-# Environment variables for all environments
-[vars]
-NODE_VERSION = "18"
-
-# Production environment configuration
-[env.production]
-name = "coolsculpting-de"
-
-# Production environment variables
-[env.production.vars]
-NODE_VERSION = "18"
-NEXT_PUBLIC_ENV = "production"
-# Add your production environment variables here
-# NEXT_PUBLIC_API_URL = "https://api.example.com"
-# NEXT_PUBLIC_ANALYTICS_ID = "your-analytics-id"
-
-# Preview environment configuration (for non-main branches)
-[env.preview]
-name = "prev.coolsculpting-de"
-
-# Preview environment variables
-[env.preview.vars]
-NODE_VERSION = "18"
-NEXT_PUBLIC_ENV = "preview"
-# Add your preview environment variables here
-# NEXT_PUBLIC_API_URL = "https://api-staging.example.com"
-# NEXT_PUBLIC_ANALYTICS_ID = "your-staging-analytics-id"
