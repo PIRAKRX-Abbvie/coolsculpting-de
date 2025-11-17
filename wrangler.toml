@@ -4,10 +4,6 @@ compatibility_date = "2024-11-06"
 # Pages configuration
 pages_build_output_dir = ".vercel/output/static"
 
-# Build settings
-[build]
-command = "npm run build"
-
 # Environment variables for all environments
 [vars]
 NODE_VERSION = "18"
@@ -15,65 +11,23 @@ NODE_VERSION = "18"
 # Production environment configuration
 [env.production]
 name = "coolsculpting-de"
-route = "coolsculpting-de.pages.dev"
 
 # Production environment variables
 [env.production.vars]
+NODE_VERSION = "18"
 NEXT_PUBLIC_ENV = "production"
 # Add your production environment variables here
 # NEXT_PUBLIC_API_URL = "https://api.example.com"
 # NEXT_PUBLIC_ANALYTICS_ID = "your-analytics-id"
 
-# Preview/staging environment configuration (for non-main branches)
+# Preview environment configuration (for non-main branches)
 [env.preview]
-name = "prod.coolsculpting-de"
+name = "prev.coolsculpting-de"
 
 # Preview environment variables
 [env.preview.vars]
+NODE_VERSION = "18"
 NEXT_PUBLIC_ENV = "preview"
 # Add your preview environment variables here
 # NEXT_PUBLIC_API_URL = "https://api-staging.example.com"
 # NEXT_PUBLIC_ANALYTICS_ID = "your-staging-analytics-id"
-
-# Development environment configuration
-[env.development]
-name = "dev.coolsculpting-de"
-
-# Development environment variables
-[env.development.vars]
-NEXT_PUBLIC_ENV = "development"
-# Add your development environment variables here
-# NEXT_PUBLIC_API_URL = "https://api-dev.example.com"
-
-# Headers configuration for security and performance
-[[headers]]
-for = "/*"
-[headers.values]
-X-Frame-Options = "DENY"
-X-Content-Type-Options = "nosniff"
-Referrer-Policy = "strict-origin-when-cross-origin"
-Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-# Cache static assets
-[[headers]]
-for = "/_next/static/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache images
-[[headers]]
-for = "/images/*"
-[headers.values]
-Cache-Control = "public, max-age=86400, s-maxage=604800"
-
-# Redirects (if needed)
-# [[redirects]]
-# from = "/old-path"
-# to = "/new-path"
-# status = 301
-
-# SPA fallback for client-side routing
-[[redirects]]
-from = "/*"
-to = "/404.html"
-status = 404
