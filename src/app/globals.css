@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --swiper-theme-color: white !important;
+}
+
+#mouse-parallax-container {
+    z-index: 11;
+}
+
+[data-headlessui-state] svg {
+    transform: scale(0.7) rotate(180deg);
+}
+
+[data-headlessui-state="open"] svg {
+    transform: scale(0.7) rotate(0deg);
+}
+
+.disabled-dropdown {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+details[open] summary svg {
+    transform: rotate(180deg);
+}
+
+#doccheckLoginModal + header,
+#doccheckLoginModal + header + main,
+#doccheckLoginModal + header + main + footer {
+    filter: blur(3px);
+}
+
+.swiper-pagination {
+    position: static !important;
+    margin-top: 20px;
+}
+
+/*sup {
+    font-size: 50%;
+    top: -0.75em;
+}*/
+
+.line-list {
+    list-style: none;
+    padding-left: 16px;
+}
+
+.line-list li {
+    position: relative;
+}
+
+.line-list li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -16px;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #0B2959;
+}
+
+.wind-rose-wrap .inner {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wind-rose-wrap .inner .front,
+.wind-rose-wrap .inner .back {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all .4s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wind-rose-wrap .inner.active .front {
+    transform: rotateX(0) rotateY(180deg) scale(1);
+}
+
+.wind-rose-wrap .inner.active .back {
+    transform: rotateX(0) rotateY(0) scale(1);
+    visibility: visible;
+}
+
+.wind-rose-wrap .inner .front {
+    transform: rotateX(0) rotateY(0) scale(1);
+}
+
+.wind-rose-wrap .inner .back {
+    transform: rotateX(0) rotateY(-180deg) scale(1);
+    visibility: hidden;
+}
+
+.ot-sdk-show-settings {
+    cursor: pointer;
+}
