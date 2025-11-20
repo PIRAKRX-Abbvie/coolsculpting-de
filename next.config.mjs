@@ -1,30 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-//   experimental: { appDir: true },
+  output: 'export',
 
   async redirects() {
     return [
       {
         source: "/anbieter-suchen/",
         destination: "https://cliniclocator.allerganaesthetics.de/anbieter-suchen/",
-        permanent: true, // 301 redirect
+        permanent: true,
       },
     ];
   },
 
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.eot$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          mimetype: 'application/vnd.ms-fontobject'
-        }
-      }
-    });
-    return config;
-  },
-  
   images: {
     remotePatterns: [
       {
@@ -39,4 +26,4 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;

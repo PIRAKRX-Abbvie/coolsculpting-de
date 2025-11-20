@@ -12,8 +12,6 @@ name = "coolsculpting-de"
 type = "static"
 account_id = "73ee52867f4d9cc03f6b57261cbb72bb"
 workers_dev = true
-route = ""
-zone_id = ""
 
 [site]
 bucket = "./out"
