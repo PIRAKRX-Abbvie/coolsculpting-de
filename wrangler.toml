@@ -1,5 +1,21 @@
-name = "coolsculpting-de"
-compatibility_date = "2024-11-17"
 
-pages_build_output_dir = "vercel"
+# name = "coolsculpting-de"
+# compatibility_date = "2025-11-20"
+
+# pages_build_output_dir = ".vercel/output/static"
+
+# [site]
+# bucket = ".vercel/output/static"
+# entry-point = "."
+
+name = "coolsculpting-de"
+type = "static"
+account_id = "73ee52867f4d9cc03f6b57261cbb72bb"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./out"
+entry-point = "."
 
