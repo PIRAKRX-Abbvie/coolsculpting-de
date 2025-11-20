@@ -1,6 +1,5 @@
 name = "coolsculpting-de"
 compatibility_date = "2024-11-17"
-compatibility_flags = ["nodejs_compat"]
 
-pages_build_output_dir = ".vercel/output/static"
+pages_build_output_dir = "vercel"
 
